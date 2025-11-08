@@ -23,5 +23,4 @@
   "errorDetails": "Detalji greške:",
   "stackTrace": "Stack Trace (samo za razvoj)",
   "reloadPage": "Ponovno učitaj stranicu"
-}</content>
-<parameter name="filePath">client/src/locales/hr/common.json
+}

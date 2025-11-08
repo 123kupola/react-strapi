@@ -10,7 +10,7 @@ import type { Route } from "./+types/root";
 import { Navigation } from "./components/custom/Navigation";
 import { ErrorBoundary as CustomErrorBoundary } from "./components/custom/ErrorBoundary";
 import "./app.css";
-import "./lib/i18n";
+import "../src/lib/i18n";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },

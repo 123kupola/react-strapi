@@ -9,6 +9,9 @@ export default factories.createCoreRouter('api::landing-page.landing-page', {
     find: {
       policies: [],
       middlewares: ["global::global-page-populate"]
+    },
+    update: {
+      policies: []
     }
   }
 });

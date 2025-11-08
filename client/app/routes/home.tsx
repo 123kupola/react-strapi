@@ -3,8 +3,9 @@ import { BlockRenderer } from "../components/blocks";
 import { getLandingPage } from "../lib/api";
 import { handleApiError } from "../lib/utils";
 
-export async function loader({}: Route.LoaderArgs) {
-  const response = await getLandingPage();
+export async function loader({ params }: Route.LoaderArgs) {
+  const locale = (params as any).locale || 'sl';
+  const response = await getLandingPage(locale);
   handleApiError(response, "landing page");
   if (!response?.data)
     throw new Response("Landing page not found", { status: 404 });

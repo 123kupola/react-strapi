@@ -31,18 +31,19 @@ interface ILandingPage {
   blocks: Block[];
 }
 
-export async function getLandingPage() {
-  const response = await sdk.single("landing-page").find();
+export async function getLandingPage(locale = 'sl') {
+  const response = await sdk.single("landing-page").find({ locale });
   return response as StrapiLoaderResponse<ILandingPage>;
 }
 
-export async function getArticles() {
-  const response = await sdk.collection("articles").find();
+export async function getArticles(locale = 'sl') {
+  const response = await sdk.collection("articles").find({ locale });
   return response as StrapiLoaderResponse<IArticleDetail[]>;
 }
 
-export async function getArticleBySlug(slug: string) {
+export async function getArticleBySlug(slug: string, locale = 'sl') {
   const response = await sdk.collection("articles").find({
+    locale,
     filters: {
       slug: {
         $eq: slug,

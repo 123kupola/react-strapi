@@ -4,7 +4,8 @@ import { getArticleBySlug } from "../lib/api";
 import { handleApiError, getStrapiMedia } from "../lib/utils";
 
 export async function loader({ params }: Route.LoaderArgs) {
-  const response = await getArticleBySlug(params.slug);
+  const locale = (params as any).locale || 'sl';
+  const response = await getArticleBySlug(params.slug, locale);
   handleApiError(response, "article");
   const article = response.data?.[0];
   if (!article) throw new Response("Article not found", { status: 404 });

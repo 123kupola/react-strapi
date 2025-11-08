@@ -1,5 +1,5 @@
 import type { Route } from "./+types/articles._index";
-import { Link } from "react-router";
+import { Link, useParams } from "react-router";
 import { StrapiImage } from "../components/custom/StrapiImage";
 import { getArticles } from "../lib/api";
 import { handleApiError } from "../lib/utils";
@@ -11,8 +11,9 @@ import {
 } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 
-export async function loader({}: Route.LoaderArgs) {
-  const response = await getArticles();
+export async function loader({ params }: Route.LoaderArgs) {
+  const locale = (params as any).locale || 'sl';
+  const response = await getArticles(locale);
   handleApiError(response, "articles");
   return response;
 }
@@ -56,6 +57,7 @@ const styles = {
 };
 
 export default function ArticlesIndex({ loaderData }: Route.ComponentProps) {
+  const { locale } = useParams();
   const response = loaderData;
   const articles = response.data || [];
 
@@ -119,7 +121,7 @@ export default function ArticlesIndex({ loaderData }: Route.ComponentProps) {
                     className={styles.readMoreBtn}
                     asChild
                   >
-                    <Link to={`/articles/${article.slug}`}>
+                     <Link to={`/${locale}/articles/${article.slug}`}>
                       Read more
                       <svg
                         className={styles.readMoreIcon}

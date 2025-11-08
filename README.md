@@ -1,118 +1,139 @@
-# Strapi React Router 7 Starter
+# Strapi React Router 7 Začetni Projekt
 
-A full-stack TypeScript starter project featuring Strapi headless CMS and React Router 7 with modern UI components.
+Polno-stack TypeScript začetni projekt s Strapi headless CMS in React Router 7 z modernimi komponentami uporabniškega vmesnika.
 
-## 🚀 Tech Stack
+## 🚀 Tehnološki Sklad
 
-### Frontend (Client)
-- **React Router 7** - Full-stack React framework with file-based routing
-- **React 19** - Latest React with modern features
-- **TypeScript** - Type-safe development
-- **TailwindCSS 4** - Utility-first CSS framework
-- **Radix UI** - Accessible, unstyled UI components
-- **Lucide React** - Beautiful & consistent icons
-- **React Markdown** - Markdown rendering with GitHub Flavored Markdown support
-- **Vite** - Fast build tool and development server
+### Frontend (Odjemalec)
+- **React Router 7** - Polno-stack React ogrodje z datotečnim usmerjanjem
+- **React 19** - Najnovejši React z modernimi funkcijami
+- **TypeScript** - Varno razvojno okolje
+- **TailwindCSS 4** - Priročni CSS ogrodje
+- **Radix UI** - Dostopne, neoblikovane komponente uporabniškega vmesnika
+- **Lucide React** - Lepi in dosledni ikoni
+- **React Markdown** - Upodabljanje Markdown z podporo GitHub Flavored Markdown
+- **Vite** - Hitro orodje za gradnjo in razvojni strežnik
 
-### Backend (Server)
-- **Strapi 5** - Headless CMS with admin panel
-- **SQLite** - Database (better-sqlite3)
-- **TypeScript** - Type-safe backend development
-- **Node.js** - Runtime environment
+### Backend (Strežnik)
+- **Strapi 5** - Headless CMS z admin panelom
+- **SQLite** - Baza podatkov (better-sqlite3)
+- **TypeScript** - Varno razvojno okolje za backend
+- **Node.js** - Izvajalno okolje
 
-### Development Tools
-- **Concurrently** - Run multiple commands in parallel
-- **Wait-on** - Wait for services to be available
-- **ESLint & TypeScript** - Code quality and type checking
+### Orodja za Razvoj
+- **Concurrently** - Izvajanje več ukazov vzporedno
+- **Wait-on** - Čakanje na razpoložljivost storitev
+- **ESLint & TypeScript** - Kakovost kode in preverjanje tipov
 
-## 📋 Prerequisites
+## 📋 Predpogoji
 
 - Node.js (>=20.0.0)
-- npm package manager
+- npm upravitelj paketov
 
-## 🛠️ Setup
+## 🛠️ Nastavitev
 
-### Quick Start
+### Hitri Začetek
 
-1. **Clone the repository**
+1. **Klonirajte repozitorij**
    ```bash
    git clone <repository-url>
    cd react-project
    ```
 
-2. **Install dependencies and setup both client and server**
+2. **Namestite odvisnosti in nastavite odjemalca ter strežnik**
     ```bash
     npm run setup
     ```
 
-3. **Seed the database with sample data**
+3. **Posadite bazo podatkov z vzorčnimi podatki**
     ```bash
     npm run seed
     ```
 
-4. **Start development servers**
+4. **Zaženite razvojne strežnike**
     ```bash
     npm run dev
     ```
 
-The application will be available at:
-- **Frontend**: http://localhost:5173
+Aplikacija bo na voljo na:
+- **Frontend**: http://localhost:5174
 - **Strapi Admin**: http://localhost:1337/admin
 
-### Manual Setup
+### Ročna Nastavitev
 
-If you prefer to set up manually:
+Če želite nastaviti ročno:
 
-1. **Install root dependencies**
+1. **Namestite korenske odvisnosti**
     ```bash
     npm install
     ```
 
-2. **Setup client**
+2. **Nastavite odjemalca**
     ```bash
     npm run setup:client
     ```
 
-3. **Setup server**
+3. **Nastavite strežnik**
     ```bash
     npm run setup:server
     ```
 
-4. **Seed database**
+4. **Posadite bazo podatkov**
     ```bash
     npm run seed
     ```
 
-## 🎯 Available Scripts
+## 🎯 Razpoložljivi Skripti
 
-### Root Level
-- `npm run setup` - Install and setup both client and server
-- `npm run dev` - Start both development servers
-- `npm run seed` - Import seed data into Strapi
-- `npm run export` - Export current Strapi data
-- `npm run client` - Start only the client development server
-- `npm run server` - Start only the server development server
+### Korenska Raven
+- `npm run setup` - Namestite in nastavite odjemalca ter strežnik
+- `npm run dev` - Zaženite oba razvojna strežnika
+- `npm run seed` - Uvozite vzorčne podatke v Strapi
+- `npm run export` - Izvozite trenutne Strapi podatke
+- `npm run client` - Zaženite samo razvojni strežnik odjemalca
+- `npm run server` - Zaženite samo razvojni strežnik strežnika
 
-### Client (Frontend)
+### Odjemalec (Frontend)
 ```bash
 cd client
-npm run dev        # Start development server
-npm run build      # Build for production
-npm run start      # Start production server
-npm run typecheck  # Run TypeScript checks
+npm run dev        # Zaženite razvojni strežnik
+npm run build      # Gradite za produkcijo
+npm run start      # Zaženite produkcijski strežnik
+npm run typecheck  # Izvedite TypeScript preverjanja
 ```
 
-### Server (Strapi)
+### Strežnik (Strapi)
 ```bash
 cd server
-npm run develop    # Start development server with admin panel
-npm run start      # Start production server
-npm run build      # Build admin panel
-npm run console    # Open Strapi console
+npm run develop    # Zaženite razvojni strežnik z admin panelom
+npm run start      # Zaženite produkcijski strežnik
+npm run build      # Gradite admin panel
+npm run console    # Odprite Strapi konzolo
 ```
 
-## 📁 Project Structure
+## 📁 Struktura Projekta
 
+```
+├── client/                 # React Router 7 frontend
+│   ├── app/
+│   │   ├── components/     # Ponovno uporabne komponente uporabniškega vmesnika
+│   │   │   ├── blocks/     # Dinamični bloki vsebine
+│   │   │   ├── custom/     # Prilagojene komponente
+│   │   │   │   └── ui/         # Osnovne komponente uporabniškega vmesnika (Radix)
+│   │   ├── lib/           # Pripomočki in API odjemalec
+│   │   ├── routes/        # Datotečno usmerjanje
+│   │   └── types/         # TypeScript definicije tipov
+│   └── package.json
+│
+├── server/                # Strapi CMS backend
+│   ├── config/           # Strapi konfiguracija
+│   ├── src/
+│   │   ├── api/          # API končne točke
+│   │   └── components/   # Strapi komponente
+│   └── package.json
+│
+├── seed-data.tar.gz      # Vzorčni podatki za sajenje
+└── package.json          # Korenska konfiguracija paketov
 ```
 ├── client/                 # React Router 7 frontend
 │   ├── app/
@@ -136,44 +157,44 @@ npm run console    # Open Strapi console
 └── package.json          # Root package configuration
 ```
 
-## 🎨 Features
+## 🎨 Funkcije
 
-- **Dynamic Content Blocks** - Flexible page building with reusable components
-- **Article Management** - Full CRUD for articles with featured images and authors
-- **Type-Safe API** - Strongly typed API responses and components
-- **Responsive Design** - Mobile-first responsive layouts
-- **SEO Optimized** - Meta tags and structured data
-- **Error Handling** - Graceful error boundaries and 404 pages
-- **Image Optimization** - Optimized image loading with aspect ratios
+- **Dinamični Bloki Vsebine** - Prilagodljiva gradnja strani s ponovno uporabnimi komponentami
+- **Upravljanje Člankov** - Polni CRUD za članke s predstavljenimi slikami in avtorji
+- **Varno Tipiziran API** - Močno tipizirani API odzivi in komponente
+- **Odzivni Dizajn** - Mobilno-prvi odzivni postavitve
+- **Optimizirano za SEO** - Meta oznake in strukturirani podatki
+- **Obravnava Napak** - Elegančne meje napak in 404 strani
+- **Optimizacija Slik** - Optimizirano nalaganje slik z razmerji stranic
 
-## 🔧 Configuration
+## 🔧 Konfiguracija
 
-### Environment Variables
+### Spremenljivke Okolja
 
-The setup script automatically copies environment files. You can manually configure:
+Skript za nastavitev samodejno kopira datoteke okolja. Lahko ročno konfigurirate:
 
-- Copy `.env.example` to `.env` in both `client/` and `server/` directories
-- Update database and API configurations as needed
+- Kopirajte `.env.example` v `.env` v obeh mapah `client/` in `server/`
+- Posodobite konfiguracije baze podatkov in API po potrebi
 
 ### Strapi Admin
 
-After running `yarn seed`, you can access the Strapi admin panel at http://localhost:1337/admin with the seeded admin credentials.
+Po izvedbi `npm run seed` lahko dostopate do Strapi admin panela na http://localhost:1337/admin s posajenimi admin poverilnicami.
 
-## 📚 Learn More
+## 📚 Izvedite Več
 
-- [React Router 7 Documentation](https://reactrouter.com)
-- [Strapi Documentation](https://docs.strapi.io)
-- [TailwindCSS Documentation](https://tailwindcss.com/docs)
-- [Radix UI Documentation](https://www.radix-ui.com)
+- [React Router 7 Dokumentacija](https://reactrouter.com)
+- [Strapi Dokumentacija](https://docs.strapi.io)
+- [TailwindCSS Dokumentacija](https://tailwindcss.com/docs)
+- [Radix UI Dokumentacija](https://www.radix-ui.com)
 
-## 🤝 Contributing
+## 🤝 Prispevanje
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+1. Forknite repozitorij
+2. Ustvarite vejo funkcije
+3. Naredite svoje spremembe
+4. Dodajte teste, če je primerno
+5. Pošljite zahtevo za združitev
 
-## 📄 License
+## 📄 Licenca
 
-This project is licensed under the MIT License.
+Ta projekt je licenciran pod MIT licenco.

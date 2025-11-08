@@ -36,7 +36,7 @@ Implementacija večjezičnosti na frontend strani z uporabo react-i18next. Privz
 - [x] Jezikovne datoteke ustvarjene
 - [x] Routing posodobljen
 - [x] API klice posodobljeni
-- [ ] Testirano
+- [x] Testirano
 
 ## Opombe
 - Uporabi useTranslation hook za prevode

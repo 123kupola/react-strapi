@@ -29,9 +29,9 @@ Implementacija večjezičnosti na backend strani z uporabo Strapi i18n plugin-a.
 
 ## Status
 - [x] i18n plugin omogočen
-- [ ] Locales konfigurirani
-- [ ] Content types posodobljeni
-- [ ] API testiran
+- [x] Locales konfigurirani
+- [x] Content types posodobljeni
+- [x] API testiran
 - [x] UI nizi shranjeni
 
 ## Opombe

@@ -1,8 +1,10 @@
 import { isRouteErrorResponse, useRouteError } from "react-router";
+import { useTranslation } from "react-i18next";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader } from "../ui/card";
 
 export function ErrorBoundary() {
+  const { t } = useTranslation();
   const error = useRouteError();
 
   if (isRouteErrorResponse(error)) {
@@ -15,27 +17,27 @@ export function ErrorBoundary() {
               {error.status}
             </h1>
             <h2 className="text-2xl font-semibold text-foreground mb-2">
-              {error.status === 404 ? "Page Not Found" : "Something Went Wrong"}
+              {error.status === 404 ? t('pageNotFound') : t('somethingWentWrong')}
             </h2>
             <p className="text-muted-foreground">
               {error.status === 404
-                ? "The page you're looking for doesn't exist."
-                : error.statusText || "An unexpected error occurred."}
+                ? t('pageNotFoundDesc')
+                : error.statusText || t('unexpectedError')}
             </p>
           </CardHeader>
           <CardContent className="space-y-4">
-            <Button 
+            <Button
               onClick={() => window.location.reload()}
               className="w-full"
             >
-              Try Again
+              {t('tryAgain')}
             </Button>
-            <Button 
-              variant="outline" 
-              className="w-full" 
+            <Button
+              variant="outline"
+              className="w-full"
               asChild
             >
-              <a href="/">Go Home</a>
+              <a href="/sl">{t('goHome')}</a>
             </Button>
           </CardContent>
         </Card>
@@ -44,7 +46,7 @@ export function ErrorBoundary() {
   }
 
   // Handle JavaScript errors
-  let errorMessage = "An unexpected error occurred";
+  let errorMessage = t('unexpectedError');
   let errorDetails = "";
 
   if (error instanceof Error) {
@@ -74,20 +76,20 @@ export function ErrorBoundary() {
             </svg>
           </div>
           <h1 className="text-3xl font-bold text-foreground mb-2">
-            Oops! Something went wrong
+            {t('oopsError')}
           </h1>
           <p className="text-muted-foreground">
-            We encountered an unexpected error. Please try again or contact support if the problem persists.
+            {t('errorDesc')}
           </p>
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="bg-muted rounded-lg p-4">
-            <h3 className="text-sm font-semibold text-foreground mb-2">Error Details:</h3>
+            <h3 className="text-sm font-semibold text-foreground mb-2">{t('errorDetails')}</h3>
             <p className="text-sm text-destructive font-mono">{errorMessage}</p>
             {import.meta.env.DEV && errorDetails && (
               <details className="mt-4">
                 <summary className="text-sm font-semibold text-foreground cursor-pointer">
-                  Stack Trace (Development Only)
+                  {t('stackTrace')}
                 </summary>
                 <pre className="mt-2 text-xs text-muted-foreground overflow-x-auto whitespace-pre-wrap">
                   {errorDetails}
@@ -101,7 +103,7 @@ export function ErrorBoundary() {
               onClick={() => window.location.reload()}
               className="flex-1"
             >
-              Reload Page
+              {t('reloadPage')}
             </Button>
             <Button
               variant="outline"

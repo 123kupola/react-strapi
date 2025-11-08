@@ -1,5 +1,6 @@
 import type { Route } from "./+types/articles._index";
 import { Link, useParams } from "react-router";
+import { useTranslation } from "react-i18next";
 import { StrapiImage } from "../components/custom/StrapiImage";
 import { getArticles } from "../lib/api";
 import { handleApiError } from "../lib/utils";
@@ -20,8 +21,8 @@ export async function loader({ params }: Route.LoaderArgs) {
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Articles" },
-    { name: "description", content: "Read our latest articles and insights." },
+    { title: "Članki" },
+    { name: "description", content: "Preberite naše najnovejše članke" },
   ];
 }
 
@@ -57,6 +58,7 @@ const styles = {
 };
 
 export default function ArticlesIndex({ loaderData }: Route.ComponentProps) {
+  const { t } = useTranslation();
   const { locale } = useParams();
   const response = loaderData;
   const articles = response.data || [];
@@ -65,15 +67,15 @@ export default function ArticlesIndex({ loaderData }: Route.ComponentProps) {
     <div className={styles.root}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h1 className={styles.title}>Articles</h1>
+          <h1 className={styles.title}>{t('articlesTitle')}</h1>
           <p className={styles.subtitle}>
-            Discover insights, tutorials, and stories from our team
+            {t('articlesDescription')}
           </p>
         </div>
 
         {articles.length === 0 ? (
           <div className={styles.emptyWrap}>
-            <p className={styles.emptyText}>No articles found.</p>
+            <p className={styles.emptyText}>{t('noArticles')}</p>
           </div>
         ) : (
           <div className={styles.grid}>
@@ -104,7 +106,7 @@ export default function ArticlesIndex({ loaderData }: Route.ComponentProps) {
                               day: "numeric",
                             }
                           )
-                        : "No date"}
+                        : t('noDate')}
                     </time>
                   </div>
 
@@ -122,7 +124,7 @@ export default function ArticlesIndex({ loaderData }: Route.ComponentProps) {
                     asChild
                   >
                      <Link to={`/${locale}/articles/${article.slug}`}>
-                      Read more
+                      {t('readMore')}
                       <svg
                         className={styles.readMoreIcon}
                         fill="none"

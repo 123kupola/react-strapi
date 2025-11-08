@@ -14,8 +14,8 @@ export async function loader({ params }: Route.LoaderArgs) {
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Landing Page" },
-    { name: "description", content: "This is the main website page." },
+    { title: "Domača Stran" },
+    { name: "description", content: "To je glavna stran spletnega mesta." },
   ];
 }
 

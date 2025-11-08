@@ -1,7 +1,7 @@
 # Plan za Implementacijo Večjezičnega Spletišča - Backend (Strapi)
 
 ## Pregled
-Implementacija večjezičnosti na backend strani z uporabo Strapi i18n plugin-a. Privzeti jezik: Slovenian (sl).
+Implementacija večjezičnosti na backend strani z uporabo Strapi i18n plugin-a. Podprti jeziki: Slovenian (sl), English (en), Croatian (hr). Privzeti jezik: Slovenian (sl).
 
 ## Koraki Implementacije
 

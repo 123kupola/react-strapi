@@ -51,6 +51,14 @@ export function Navigation() {
             >
               🇺🇸
             </Link>
+            <Link
+              to="/hr"
+              className={`w-8 h-8 rounded-full flex items-center justify-center text-lg transition-all ${
+                locale === 'hr' ? 'bg-gray-200' : 'bg-gray-100 hover:bg-gray-200'
+              }`}
+            >
+              🇭🇷
+            </Link>
           </div>
         </div>
       </div>

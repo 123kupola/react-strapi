@@ -3,6 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import slTranslations from '../locales/sl/common.json';
 import enTranslations from '../locales/en/common.json';
+import hrTranslations from '../locales/hr/common.json';
 
 i18n
   .use(LanguageDetector)
@@ -15,6 +16,7 @@ i18n
     resources: {
       sl: { translation: slTranslations },
       en: { translation: enTranslations },
+      hr: { translation: hrTranslations },
     },
   });
 

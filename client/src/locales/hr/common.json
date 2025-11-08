@@ -1,0 +1,27 @@
+{
+  "welcome": "Dobrodošli",
+  "readMore": "Pročitaj više",
+  "home": "Početna",
+  "articles": "Članci",
+  "contact": "Kontakt",
+  "siteTitle": "Vaša Web Stranica",
+  "articlesTitle": "Članci",
+  "articlesSubtitle": "Pročitajte naše najnovije članke",
+  "articlesDescription": "Otkrijte uvide, vodiče i priče iz naše ekipe",
+  "noArticles": "Nema pronađenih članaka",
+  "noDate": "Bez datuma",
+  "landingPageTitle": "Početna Stranica",
+  "landingPageDescription": "Ovo je glavna stranica web stranice",
+  "pageNotFound": "Stranica nije pronađena",
+  "somethingWentWrong": "Nešto je pošlo po zlu",
+  "pageNotFoundDesc": "Stranica koju tražite ne postoji.",
+  "unexpectedError": "Došlo je do neočekivane greške.",
+  "tryAgain": "Pokušaj ponovo",
+  "goHome": "Idi kući",
+  "oopsError": "Ups! Nešto je pošlo po zlu",
+  "errorDesc": "Naišli smo na neočekivanu grešku. Pokušajte ponovo ili kontaktirajte podršku ako se problem nastavi.",
+  "errorDetails": "Detalji greške:",
+  "stackTrace": "Stack Trace (samo za razvoj)",
+  "reloadPage": "Ponovno učitaj stranicu"
+}</content>
+<parameter name="filePath">client/src/locales/hr/common.json

@@ -1,7 +1,7 @@
 # Plan za Implementacijo Večjezičnega Spletišča - Frontend (React Router)
 
 ## Pregled
-Implementacija večjezičnosti na frontend strani z uporabo react-i18next. Privzeti jezik: Slovenian (sl).
+Implementacija večjezičnosti na frontend strani z uporabo react-i18next. Podprti jeziki: Slovenian (sl), English (en), Croatian (hr). Privzeti jezik: Slovenian (sl).
 
 ## Koraki Implementacije
 

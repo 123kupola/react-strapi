@@ -1,6 +1,6 @@
 # Strapi React Router 7 Začetni Projekt
 
-Polno-stack TypeScript začetni projekt s Strapi headless CMS in React Router 7 z modernimi komponentami uporabniškega vmesnika.
+Polno-stack TypeScript začetni projekt s Strapi headless CMS in React Router 7 z modernimi komponentami uporabniškega vmesnika. Podpira večjezičnost: Slovenščina, Angleščina in Hrvaščina.
 
 ## 🚀 Tehnološki Sklad
 

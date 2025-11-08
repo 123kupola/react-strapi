@@ -33,6 +33,25 @@ export function Navigation() {
               {t('articles')}
             </Link>
           </div>
+
+          <div className="flex items-center space-2">
+            <Link
+              to="/sl"
+              className={`w-8 h-8 rounded-full flex items-center justify-center text-lg transition-all ${
+                locale === 'sl' ? 'bg-gray-200' : 'bg-gray-100 hover:bg-gray-200'
+              }`}
+            >
+              🇸🇮
+            </Link>
+            <Link
+              to="/en"
+              className={`w-8 h-8 rounded-full flex items-center justify-center text-lg transition-all ${
+                locale === 'en' ? 'bg-gray-200' : 'bg-gray-100 hover:bg-gray-200'
+              }`}
+            >
+              🇺🇸
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

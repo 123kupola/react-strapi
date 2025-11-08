@@ -1,9 +1,15 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 export function Navigation() {
   const { t, i18n } = useTranslation();
-  const locale = i18n.language || 'sl';
+  const location = useLocation();
+  const locale = location.pathname.split('/')[1] || 'sl';
+
+  useEffect(() => {
+    i18n.changeLanguage(locale);
+  }, [locale, i18n]);
 
   return (
     <nav className="bg-background shadow-sm border-b border-border">
